@@ -1,0 +1,160 @@
+/*----- Fade-in animation -----*/
+.animation {
+    animation: fadeIn 0.2s;
+}
+
+.animation2 {
+    /*----- + delay on form message -----*/
+    opacity: 0;
+    animation: fadeIn 0.2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*----- chat personalized CSS -----*/
+
+.gradient-bg {
+    background: linear-gradient(150deg, rgba(239,193,237,0.7791491596638656) 0%, rgba(218,112,214,0.7539390756302521) 27%, rgba(143, 47, 140, 0.838) 70%);
+}
+
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    max-height: 800px;
+    overflow-y: scroll;
+}
+
+.chat-message-right {
+    flex-direction: row-reverse;
+    margin-left: auto;
+
+}
+
+.chat-message-left {
+    margin-right: auto;
+}
+
+.chat-message-left,
+.chat-message-right {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.bg-message-right {
+    background-color: rgba(255, 192, 250, 0.808);
+}
+
+.bg-container{
+    background-color: orchid;
+}
+
+.btn {
+    background-color: #A774A0;
+    color: white;
+    border-style: none;
+    margin-right: 8px;
+}
+
+.btn:hover {
+    background-color: #cfa0c9;
+    color: white;
+    border-style: none;
+    margin-right: 8px;
+}
+
+.bg-chat {
+    background-color: #e9ecef;
+}
+
+/*----- typing message animation -----*/
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.lds-ellipsis div {
+    position: absolute;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgb(139, 130, 130);
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes lds-ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes lds-ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/* ----- . ----- */
+
+.progress-bar {
+    background-color: #fdc0ff;
+}
